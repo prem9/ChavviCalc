@@ -17,6 +17,7 @@ public class ChavviCalcExampleApp {
       printMenu();
       System.out.print("Enter a command: ");
       command = menuGetCommand(scan);
+      
 
       executeCommand(scan, command);
     }
@@ -53,8 +54,8 @@ public class ChavviCalcExampleApp {
 
     printMenuLine();
     
-    printMenuCommand('A', "Enter a value for A");
-    printMenuCommand('B', "Enter a value for B");
+    printMenuCommand('a', "Enter a value for A");
+    printMenuCommand('b', "Enter a value for B");
     printMenuCommand('+', "Add");
     printMenuCommand('-', "Subtract");
     printMenuCommand('*', "Multiply");
@@ -84,6 +85,23 @@ public class ChavviCalcExampleApp {
     Boolean success = true;
 
     switch (command) {
+      case 'a': 
+        
+        aVariable = scan.nextDouble();
+        break;
+      case 'b':
+        bVariable = scan.nextDouble();
+        break;
+      case '+':
+        break;
+      case '-':
+        break;
+      case '*':
+        break;
+      case '/':
+        break;
+      case 'c':
+        break;
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
         break;
