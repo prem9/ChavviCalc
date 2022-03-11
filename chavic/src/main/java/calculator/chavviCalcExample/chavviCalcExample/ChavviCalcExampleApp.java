@@ -93,14 +93,25 @@ public class ChavviCalcExampleApp {
         bVariable = scan.nextDouble();
         break;
       case '+':
+        aVariable = aVariable + bVariable;
         break;
       case '-':
+        aVariable = aVariable - bVariable;
         break;
       case '*':
+        aVariable = aVariable * bVariable;
         break;
       case '/':
+        if (bVariable == 0)
+        {
+          System.out.println("Invalid User Input.");
+          break;
+        }
+        aVariable = aVariable/bVariable;
         break;
-      case 'c':
+      case 'c': 
+        aVariable = 0; 
+        bVariable = 0;
         break;
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
