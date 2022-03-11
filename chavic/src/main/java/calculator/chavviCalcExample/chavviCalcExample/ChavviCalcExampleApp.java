@@ -86,11 +86,11 @@ public class ChavviCalcExampleApp {
 
     switch (command) {
       case 'a': 
-        System.out.println("Enter new 'a' Variable")
+        System.out.println("Enter new 'a' Variable");
         aVariable = scan.nextDouble();
         break;
       case 'b':
-      System.out.println("Enter new 'b' Variable")
+      System.out.println("Enter new 'b' Variable");
         bVariable = scan.nextDouble();
         break;
       case '+':
