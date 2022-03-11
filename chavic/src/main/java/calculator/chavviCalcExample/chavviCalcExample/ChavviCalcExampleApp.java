@@ -6,11 +6,12 @@ import java.util.*;
  * chavvi calc calculator
  */
 public class ChavviCalcExampleApp {
-
+  private static double aVariable = 0;
+  private static double bVariable = 0;
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     Character command = '_';
-
+    
     // loop until user quits
     while (command != 'q') {
       printMenu();
@@ -32,6 +33,12 @@ public class ChavviCalcExampleApp {
     );
   }
 
+  private static void printAandBLine(Double a, Double b) 
+  {
+    
+    System.out.printf("A = %.3f     B = %.3f%n", a,b);
+  }
+
   private static void printMenuCommand(Character command, String desc) {
     System.out.printf("%s\t%s\n", command, desc);
   }
@@ -42,6 +49,17 @@ public class ChavviCalcExampleApp {
     System.out.println("ChavviCalc");
     printMenuLine();
 
+    printAandBLine(aVariable, bVariable);
+
+    printMenuLine();
+    
+    printMenuCommand('A', "Enter a value for A");
+    printMenuCommand('B', "Enter a value for B");
+    printMenuCommand('+', "Add");
+    printMenuCommand('-', "Subtract");
+    printMenuCommand('*', "Multiply");
+    printMenuCommand('/', "Divide");
+    printMenuCommand('c', "Clear");
     printMenuCommand('q', "Quit");
 
     printMenuLine();
