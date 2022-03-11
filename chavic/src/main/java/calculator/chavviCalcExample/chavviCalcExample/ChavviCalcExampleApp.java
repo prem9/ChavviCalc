@@ -83,15 +83,15 @@ public class ChavviCalcExampleApp {
   // calculator functions
   private static Boolean executeCommand(Scanner scan, Character command) {
     Boolean success = true;
-
+    Scanner secondScan = new Scanner(System.in);
     switch (command) {
       case 'a': 
-        System.out.println("Enter new 'a' Variable");
-        aVariable = scan.nextDouble();
+        System.out.print("Enter new 'a' Variable: ");
+        aVariable = secondScan.nextDouble();
         break;
       case 'b':
-      System.out.println("Enter new 'b' Variable");
-        bVariable = scan.nextDouble();
+      System.out.print("Enter new 'b' Variable: ");
+        bVariable = secondScan.nextDouble();
         break;
       case '+':
         aVariable = aVariable + bVariable;
